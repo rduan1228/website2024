@@ -6,19 +6,19 @@
         <br>
         TRAVELER
     </h1>
-    <img src="src/assets/greenRectangle.png" class="divtracks-greenRectangle-1"/>
-    <img src="src/assets/purpleRectangle.png" class="divtracks-purpleRectangle-1"/>
+    <img src="/src/assets/greenRectangle.png" class="divtracks-greenRectangle-1"/>
+    <img src="/src/assets/purpleRectangle.png" class="divtracks-purpleRectangle-1"/>
     <p class="divtracks-text-2">emerging</p>
     <p class="divtracks-text-3">master</p>
-    <img src="src/assets/icon1.png" class="divtracks-icon1"/>
-    <img src="src/assets/icon2.png" class="divtracks-icon2"/>
+    <img src="/src/assets/icon1.png" class="divtracks-icon1"/>
+    <img src="/src/assets/icon2.png" class="divtracks-icon2"/>
     <h1 class="divtracks-text-4">
         WHICH TRACK
         WILL YOU CHOOSE?
     </h1>
-    <img src="src/assets/yellowRectangle.png" class="divtracks-yellowRectangle-1"/>
-    <img src="src/assets/purpleRectangle.png" class="divtracks-purpleRectangle-2"/>
-    <img src="src/assets/greenRectangle.png" class="divtracks-greenRectangle-2"/>
+    <img src="/src/assets/yellowRectangle.png" class="divtracks-yellowRectangle-1"/>
+    <img src="/src/assets/purpleRectangle.png" class="divtracks-purpleRectangle-2"/>
+    <img src="/src/assets/greenRectangle.png" class="divtracks-greenRectangle-2"/>
     <p class="divtracks-text-5">
         ARTIFICIAL
         <br>

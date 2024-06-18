@@ -2,8 +2,8 @@
 
 <template>
     <div class="header-parent">
-        <img className="headerHackWashU" src="src/assets/hackwashu.png"/>
-        <img className="headerBear" src="src/assets/headerBear.png"/>
+        <img className="headerHackWashU" src="/src/assets/hackwashu.png"/>
+        <img className="headerBear" src="/src/assets/headerBear.png"/>
         <!-- <div class="scrollLinks">
             <ul>
                 <li>apply</li>
