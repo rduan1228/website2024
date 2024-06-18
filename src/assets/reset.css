@@ -6,6 +6,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
 
+html {
+	scroll-behavior: smooth;
+  }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,8 +27,8 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'Montserrat Alternates', sans-serif;
 	vertical-align: baseline;
+	color: #FFFFFF;
 }
 body{
 	overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -37,8 +41,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	background: url('../assets/custom-images/Rectangle.jpg');
-	background-color: #BAA8BA;
+	background-color: #2B1853;
 	background-size: cover;
 	background-position: center;
 }
@@ -68,6 +71,12 @@ table {
 
 
 @font-face {
-	font-family: 'barcade';
-	src: url('./Barcade/barcadenobar.ttf') format('truetype');
+	font-family: 'FancyFont';
+	src: url('../src/assets/cinzel-decorative/CinzelDecorative-Bold.ttf') format('truetype');
 	}
+
+@font-face {
+	font-family: 'spartan-bold';
+	src: url('../src/assets/league-spartan/LeagueSpartan-Bold.ttf') format('truetype');
+	}
+	
