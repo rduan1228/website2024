@@ -72,11 +72,11 @@ table {
 
 @font-face {
 	font-family: 'FancyFont';
-	src: local('../src/assets/cinzel-decorative/CinzelDecorative-Bold.ttf') format('truetype');
+	src: url('./cinzel-decorative/CinzelDecorative-Bold.ttf') format('truetype');
 	}
 
 @font-face {
 	font-family: 'spartan-bold';
-	src: local('../src/assets/league-spartan/LeagueSpartan-Bold.ttf') format('truetype');
+	src: url('./league-spartan/LeagueSpartan-Bold.ttf') format('truetype');
 	}
 	
