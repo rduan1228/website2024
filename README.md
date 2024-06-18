@@ -1,8 +1,4 @@
-# Project Name
-
-## Description
-
-A brief description of your project.
+# Hack WashU 2024 Website
 
 ## Prerequisites
 
