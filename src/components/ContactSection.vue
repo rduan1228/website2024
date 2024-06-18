@@ -11,7 +11,7 @@
     <a href="mailto:organizers@hackwashu.com"><p class="contact-text-4">hackwashu at gmail.com</p></a>
 </div>
 </template>
-
+ 
 <style scoped>
 
 #contact-leaves-2{
