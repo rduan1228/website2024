@@ -1,6 +1,6 @@
 <template>
     <div class="about-parent">
-        <h1 class="about-text-1">About</h1>
+        <h1 class="about-text-1">ABOUT</h1>
         <p class="about-text-2">
             at Hack WashU, you'll meet fellow hackers from around the country, learn new skills, and work alongside seasoned mentors.  
             <br> 

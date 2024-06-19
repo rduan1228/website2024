@@ -94,7 +94,7 @@
 
 .contact-parent{
     position: relative;
-    height: 50vw;
+    height: 55vw;
     display: flex;
     width: 100vw;
 }
