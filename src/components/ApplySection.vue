@@ -78,8 +78,10 @@ export default defineComponent({
     </div>
 
     <div class="apply-apply-now">
-      <img src="/src/assets/yellowRectangle.png" />
-      <h1 id="apply-text-2">apply now</h1>
+      <a href="https://wustl.az1.qualtrics.com/jfe/form/SV_1YusN9NvNukt3ZY">
+        <img src="/src/assets/yellowRectangle.png" />
+        <h1 id="apply-text-2">apply now</h1>
+      </a>
     </div>
   </div>
 </template>
