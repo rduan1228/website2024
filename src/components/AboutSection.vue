@@ -12,7 +12,7 @@
         </p>
     </div>
 </template>
-
+ 
 <style scoped>
 
 .about-parent{
