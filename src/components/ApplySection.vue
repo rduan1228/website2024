@@ -79,7 +79,7 @@ export default defineComponent({
 
     <a href="https://wustl.az1.qualtrics.com/jfe/form/SV_1YusN9NvNukt3ZY">
       <div class="apply-apply-now">
-          <img src="/src/assets/yellowRectangle.png" />
+          <img id="apply-yellow-rectangle" src="/src/assets/yellowRectangle.png" />
           <h1 id="apply-text-2">apply now</h1>
       </div>
     </a>
@@ -87,6 +87,13 @@ export default defineComponent({
 </template>
 
 <style scoped>
+#apply-yellow-rectangle{
+  position: absolute;
+  width: 22vw;
+  top: -0.5vw;
+  left: -2vw;
+}
+
 #apply-text-2 {
   position: absolute;
   z-index: 100;

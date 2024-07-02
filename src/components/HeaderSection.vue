@@ -2,7 +2,7 @@
 
 <template>
     <div class="header-parent">
-        <a id="mlh-trust-badge" style="position: absolute;;max-width:100px;min-width:60px;right:1vw;top:0;width:10%;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" style="width:100%"></a>
+        <a id="mlh-trust-badge" style="position: absolute;right:1vw;top:0;width:7vw;height:5vw;z-index:10000" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" style="width:100%"></a>
         <img className="headerHackWashU" src="/src/assets/hackwashu.png"/>
         <img className="headerBear" src="/src/assets/headerBear.png"/>
         <!-- <div class="scrollLinks">
