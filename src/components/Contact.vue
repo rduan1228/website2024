@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
 <div class="contact-parent">
     <img id="contact-leaves-1" src="/src/assets/leaves-2.png"/>

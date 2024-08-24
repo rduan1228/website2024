@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import Header from "./components/HeaderSection.vue";
-import About from "./components/AboutSection.vue";
-import Apply from "./components/ApplySection.vue";
-import Contact from "./components/ContactSection.vue";
-import Privacy from "./components/PrivacySection.vue";
-import divTracks from "./components/DivTracks.vue";
-// import faq from "./components/Faq.vue";
-import sponsor from "./components/Sponsor.vue";
+import Header from "./components/Header.vue";
+import Title from "./components/Title.vue";
+import About from "./components/About.vue";
+import Tracks from "./components/Tracks.vue";
+import Sponsors from "./components/Sponsor.vue";
+import FAQS from "./components/Faq.vue";
+import Contact from "./components/Contact.vue";
+import Apply from "./components/Apply.vue";
 import Footnotes from "./components/Footnotes.vue";
 </script>
 
 <template>
   <Header />
-  <Apply />
+  <Title />
   <About />
-  <divTracks />
+  <Tracks />
+  <Sponsors />
+  <FAQS />
   <Contact />
-  <Privacy />
-  <faq />
-  <sponsor />
+  <Apply />
   <Footnotes />
 </template>
