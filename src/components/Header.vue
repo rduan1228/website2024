@@ -19,7 +19,7 @@
   overflow: hidden;
   background-color: #C5D2CE;
   padding: 1.25vw;
-  border-bottom: solid 0.5vw black;
+  border-bottom: solid 0.25vw black;
   display: flex;
   align-items:center;
 }
@@ -43,9 +43,8 @@
 }
 
 .header a:hover {
-  background-color: #ddd;
-  color: black;
   text-decoration: underline;
+  transition: ease-in 0.5s;
 }
 
 .header a.apply {

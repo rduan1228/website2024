@@ -97,7 +97,7 @@ export default defineComponent({
     align-items: center;
     padding: 0 0 0 12vw;
     height: 97.5vh;
-    border-bottom: solid 0.5vw black;
+    border-bottom: solid 0.25vw black;
 }
 
 .left-body {
@@ -146,7 +146,7 @@ export default defineComponent({
 .right-body {
     width: 35%;
     height: 97.5vh;
-    border-left: solid 0.5vw black;
+    border-left: solid 0.25vw black;
 }
 
 .scroll{
@@ -217,17 +217,18 @@ export default defineComponent({
     justify-content: center;
     border: none;
     font-size: 3.5vw;
-    font-family: pf-videotext;
+    font-family: 'pf-videotext';
     
 }
 
 .time .time-label {
     flex: 1;
+    font-size: 1.5vw;
     text-align: right;
     padding-right: 0.5vw;
     box-sizing: border-box;
     border: none;
-    font-family: open-sans;
+    font-family: 'open-sans';
 }
 
 
