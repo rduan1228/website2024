@@ -216,7 +216,8 @@ export default defineComponent({
     align-items: center;
     justify-content: center;
     border: none;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
+    font-family: pf-videotext;
     
 }
 
@@ -226,6 +227,7 @@ export default defineComponent({
     padding-right: 0.5vw;
     box-sizing: border-box;
     border: none;
+    font-family: open-sans;
 }
 
 
