@@ -12,12 +12,4 @@ import Footnotes from "./components/Footnotes.vue";
 
 <template>
   <Header />
-  <Title />
-  <About />
-  <Tracks />
-  <Sponsors />
-  <FAQS />
-  <Contact />
-  <Apply />
-  <Footnotes />
 </template>
