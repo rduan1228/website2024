@@ -2,12 +2,9 @@
 
 <template>
 <div class="contact-parent">
-    <img id="contact-leaves-1" src="/src/assets/leaves-2.png"/>
-    <img id="contact-leaves-2" src="/src/assets/leaves-2.png"/>
     <a href="https://www.instagram.com/hackwashu/?hl=en"><img id="contact-insta" src="/src/assets/insta.png"></a>
     <a href="https://www.linkedin.com/company/hack-washu"><img id="contact-linkedin" src="/src/assets/linkedin.png"></a>
     <a href="mailto:hackwashu@gmail.com"><img id="contact-gmail" src="/src/assets/gmail.png"></a>
-    <h1 class="contact-text-1">CONTACT US</h1>
     <a href="https://www.instagram.com/hackwashu/?hl=en"><p class="contact-text-2">hackwashu</p></a>
     <a href="https://www.linkedin.com/company/hack-washu"><p class="contact-text-3">linkedin.com/company/hack-washu</p></a>
     <a href="mailto:organizers@hackwashu.com"><p class="contact-text-4">hackwashu at gmail.com</p></a>
