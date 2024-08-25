@@ -51,9 +51,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="apply-parent">
-    <img id="apply-leaves-1" src="/src/assets/leaves-2.png" />
-    <img id="apply-leaves-2" src="/src/assets/leaves-2.png" />
+  <div class="timer-parent">
     <h1 id="apply-text-1">COMING SOON</h1>
     <img class="apply-line" src="/src/assets/line-1.png" />
     <img class="apply-star" src="/src/assets/star-1.png" />

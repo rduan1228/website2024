@@ -1,5 +1,53 @@
-<script setup lang="ts">
-import Timer from "./Timer.vue";
+<script setup lang="ts"></script>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+interface TimeRemaining {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+export default defineComponent({
+  data() {
+    return {
+      timeRemaining: null as TimeRemaining | null,
+      intervalId: null as number | null,
+    };
+  },
+  mounted() {
+    this.calculateTimeRemaining();
+    this.intervalId = window.setInterval(this.calculateTimeRemaining, 1000);
+  },
+  beforeUnmount() {
+    if (this.intervalId !== null) {
+      clearInterval(this.intervalId);
+    }
+  },
+  methods: {
+    calculateTimeRemaining() {
+      const targetDate = new Date('2024-10-18T19:00:00-05:00'); // Central Time (CT)
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        this.timeRemaining = { days, hours, minutes, seconds };
+      } else {
+        this.timeRemaining = null;
+        if (this.intervalId !== null) {
+          clearInterval(this.intervalId);
+        }
+      }
+    },
+  },
+});
 </script>
 
 <template>
@@ -12,11 +60,23 @@ import Timer from "./Timer.vue";
             <div class="timer-text">
                 <h2>THE <span class="big"> ADVENTURE </span> BEGINS IN </h2>
             </div>
-            <div class="time">
-                <div class="days"></div>
-                <div class="hours"></div>
-                <div class="minutes"></div>
-                <div class="seconds"></div>
+            <div class="time" v-if="timeRemaining">
+                <div class="days">
+                    <div class="time-value">{{ timeRemaining.days }}</div>
+                    <div class="time-label">days</div>
+                </div>
+                <div class="hours">
+                    <div class="time-value">{{ timeRemaining.hours }}</div>
+                    <div class="time-label">hours</div>
+                </div>
+                <div class="minutes">
+                    <div class="time-value">{{ timeRemaining.minutes }}</div>
+                    <div class="time-label">minutes</div>
+                </div>
+                <div class="seconds">
+                    <div class="time-value">{{ timeRemaining.seconds }}</div>
+                    <div class="time-label">seconds</div>
+                </div>
                 <!-- <Timer /> -->
             </div>
         </div>
@@ -116,6 +176,7 @@ import Timer from "./Timer.vue";
     justify-content: space-between;
     margin-left: 0.75vw;
     margin-right: 15vw;
+    font-size: xx-large;
 }
 
 .time div {
@@ -127,18 +188,44 @@ import Timer from "./Timer.vue";
 
 .days{
     margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .hours{
     margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .minutes{
     margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .seconds{
     margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.time .time-value {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 2.5vw;
+    
+}
+
+.time .time-label {
+    flex: 1;
+    text-align: right;
+    padding-right: 0.5vw;
+    box-sizing: border-box;
+    border: none;
 }
 
 
