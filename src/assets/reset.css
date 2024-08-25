@@ -28,7 +28,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-	color: #FFFFFF;
+	color: #000000;
 }
 body{
 	overflow-x: hidden; /* Prevent horizontal scrolling */
