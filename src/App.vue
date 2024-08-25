@@ -13,4 +13,5 @@ import Footnotes from "./components/Footnotes.vue";
 <template>
   <Header />
   <Title />
+  <Tracks />
 </template>
