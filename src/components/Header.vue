@@ -56,8 +56,9 @@
 }
 
 .header-right {
-  align-self: right;
-  flex: 0 0 120px;
+  float: right;
+  display: flex;
+  align-items: center;
 }
 
 </style>
