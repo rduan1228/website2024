@@ -1,7 +1,5 @@
-<script setup lang="ts"></script>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 interface TimeRemaining {
   days: number;
@@ -10,83 +8,77 @@ interface TimeRemaining {
   seconds: number;
 }
 
-export default defineComponent({
-  data() {
-    return {
-      timeRemaining: null as TimeRemaining | null,
-      intervalId: null as number | null,
-    };
-  },
-  mounted() {
-    this.calculateTimeRemaining();
-    this.intervalId = window.setInterval(this.calculateTimeRemaining, 1000);
-  },
-  beforeUnmount() {
-    if (this.intervalId !== null) {
-      clearInterval(this.intervalId);
+const timeRemaining = ref<TimeRemaining | null>(null);
+let intervalId: number | null = null;
+
+const calculateTimeRemaining = () => {
+  const targetDate = new Date('2024-10-18T19:00:00-05:00'); // Central Time (CT)
+  const now = new Date();
+  const difference = targetDate.getTime() - now.getTime();
+
+  if (difference > 0) {
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    timeRemaining.value = { days, hours, minutes, seconds };
+  } else {
+    timeRemaining.value = null;
+    if (intervalId !== null) {
+      clearInterval(intervalId);
     }
-  },
-  methods: {
-    calculateTimeRemaining() {
-      const targetDate = new Date('2024-10-18T19:00:00-05:00'); // Central Time (CT)
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
+  }
+};
 
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+onMounted(() => {
+  calculateTimeRemaining();
+  intervalId = window.setInterval(calculateTimeRemaining, 1000);
+});
 
-        this.timeRemaining = { days, hours, minutes, seconds };
-      } else {
-        this.timeRemaining = null;
-        if (this.intervalId !== null) {
-          clearInterval(this.intervalId);
-        }
-      }
-    },
-  },
+onBeforeUnmount(() => {
+  if (intervalId !== null) {
+    clearInterval(intervalId);
+  }
 });
 </script>
 
 <template>
-    <div class="title">
-        <div class="left-body">
-            <div class="left-body-text">
-                <h1>HACK <br> WASHU‘24</h1>
-                <p>OCT 11-12</p>
-            </div> 
-            <div class="timer-text">
-                <h2>THE <span class="big"> ADVENTURE </span> BEGINS IN </h2>
-            </div>
-            <div class="time" v-if="timeRemaining">
-                <div class="days">
-                    <div class="time-value">{{ timeRemaining.days }}</div>
-                    <div class="time-label">days</div>
-                </div>
-                <div class="hours">
-                    <div class="time-value">{{ timeRemaining.hours }}</div>
-                    <div class="time-label">hours</div>
-                </div>
-                <div class="minutes">
-                    <div class="time-value">{{ timeRemaining.minutes }}</div>
-                    <div class="time-label">minutes</div>
-                </div>
-                <div class="seconds">
-                    <div class="time-value">{{ timeRemaining.seconds }}</div>
-                    <div class="time-label">seconds</div>
-                </div>
-                <!-- <Timer /> -->
-            </div>
+  <div class="title">
+    <div class="left-body">
+      <div class="left-body-text">
+        <h1>HACK <br> WASHU‘24</h1>
+        <p>OCT 11-12</p>
+      </div>
+      <div class="timer-text">
+        <h2>THE <span class="big"> ADVENTURE </span> BEGINS IN </h2>
+      </div>
+      <div class="time" v-if="timeRemaining">
+        <div class="days">
+          <div class="time-value">{{ timeRemaining.days }}</div>
+          <div class="time-label">days</div>
         </div>
-         <div class="right-body">
-            <div class="scroll">
-                <p> (SCROLL FOR INFO)</p>
-                <img src="src/assets/arrow.png">
-            </div>
-         </div>
+        <div class="hours">
+          <div class="time-value">{{ timeRemaining.hours }}</div>
+          <div class="time-label">hours</div>
+        </div>
+        <div class="minutes">
+          <div class="time-value">{{ timeRemaining.minutes }}</div>
+          <div class="time-label">minutes</div>
+        </div>
+        <div class="seconds">
+          <div class="time-value">{{ timeRemaining.seconds }}</div>
+          <div class="time-label">seconds</div>
+        </div>
+      </div>
     </div>
+    <div class="right-body">
+      <div class="scroll">
+        <p> (SCROLL FOR INFO)</p>
+        <img src="src/assets/arrow.png">
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
