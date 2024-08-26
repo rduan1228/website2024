@@ -61,7 +61,7 @@
   transform-origin: 0 0;
   display: inline-block;
   margin-top: 52vh;
-  margin-left: 19vw;
+  margin-left: 19.25vw;
 }
 
 .right-body h1 {
