@@ -11,13 +11,13 @@ import Footnotes from "./components/Footnotes.vue";
 </script>
 
 <template>
-  <Header />
+  <!-- <Header />
   <Title />
   <About />
-  <Tracks />
+  <Tracks /> -->
   <Sponsors />
-  <FAQS />
+  <!-- <FAQS />
   <Contact />
   <Apply />
-  <Footnotes />
+  <Footnotes /> -->
 </template>

@@ -28,7 +28,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-	color: #FFFFFF;
+	color: #000000;
 }
 body{
 	overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -41,7 +41,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	background-color: #C5D2CE;
+	background-color: #FFFFFF;
 	background-size: cover;
 	background-position: center;
 }
