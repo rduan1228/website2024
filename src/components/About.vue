@@ -93,7 +93,7 @@
   transform-origin: 0 0;
   display: inline-block;
   margin-top: 38vh;
-  margin-left: 36.8vh;
+  margin-left: 19.25vw;
 }
 
 .right-body{
