@@ -1,102 +1,189 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
-<div class="contact-parent">
-    <a href="https://www.instagram.com/hackwashu/?hl=en"><img id="contact-insta" src="/src/assets/insta.png"></a>
-    <a href="https://www.linkedin.com/company/hack-washu"><img id="contact-linkedin" src="/src/assets/linkedin.png"></a>
-    <a href="mailto:hackwashu@gmail.com"><img id="contact-gmail" src="/src/assets/gmail.png"></a>
-    <a href="https://www.instagram.com/hackwashu/?hl=en"><p class="contact-text-2">hackwashu</p></a>
-    <a href="https://www.linkedin.com/company/hack-washu"><p class="contact-text-3">linkedin.com/company/hack-washu</p></a>
-    <a href="mailto:organizers@hackwashu.com"><p class="contact-text-4">hackwashu at gmail.com</p></a>
-</div>
+  <div class="contact">
+    <div class="left-body">
+      <h1>CONTACT</h1>
+    </div>
+    <div class="right-body">
+      <div class="right-body-content">
+        <h1>SEND A CARRIER PIGEON</h1>
+        <div class="contact-item">
+          <a href="https://www.instagram.com/hackwashu/?hl=en"><img id="contact-insta" src="/src/assets/instagram_icon.png"></a>
+          <a href="https://www.instagram.com/hackwashu/?hl=en"><p class="contact-text-2">@hackwashu</p></a>
+        </div>
+        <div class="contact-item">
+          <a href="https://www.linkedin.com/company/hack-washu"><img id="contact-linkedin" src="/src/assets/linkedin-icon.png"></a>
+          <a href="https://www.linkedin.com/company/hack-washu"><p class="contact-text-3">linkedin.com/company/hack-washu</p></a>
+        </div>
+        <div class="contact-item">
+          <a href="mailto:hackwashu@gmail.com"><img id="contact-gmail" src="/src/assets/gmail-icon.png"></a>
+          <a href="mailto:organizers@hackwashu.com"><p class="contact-text-4">hackwashu at gmail.com</p></a>
+        </div>
+      </div>
+      <div class="p asset1"></div>
+      <div class="p asset2"></div>
+    </div>
+  </div>
 </template>
- 
+
 <style scoped>
 
-#contact-leaves-2{
-    position: absolute;
-    transform: scaleX(-1) scaleY(-1);
-    right: 0vw;
-    top: 20vw;
-    width: 48vw;
-    height: 32vw;
-
+.p{
+  background-color: rgba(185, 163, 213, 0.5);
+  z-index: 1;
+  position: absolute;
 }
 
-#contact-leaves-1{
-    position: absolute;
-    transform: scaleY(-1);
-    top: 20vw;
-    width: 48vw;
-    height: 32vw;
-
+.contact{
+  display: flex;
+  justify-content: space-between;
+  height: 65vh;
+  border-bottom: 0.25vw solid black;
 }
 
-.contact-text-4{
-    position: absolute;
-    font-family: 'spartan';
-    font-size: 3vw;
-    width: 100vw;
-    left: 40vw;
-    top: 34vw;
+.left-body{
+  z-index: 2;
+  position: relative;
+  width: 24%;
+  height: auto;
+  border-right: 0.25vw solid black;
 }
 
-.contact-text-3{
-    position: absolute;
-    font-family: 'spartan';
-    font-size: 3vw;
-    width: 100vw;
-    left: 40vw;
-    top: 22vw;
+.left-body h1{
+  z-index: 2;
+  font-family: 'pf-videotext';
+  font-size: 6vw;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  display: inline-block;
+  margin-top: 52vh;
+  margin-left: 19vw;
 }
 
-.contact-text-2{
-    position: absolute;
-    font-family: 'spartan';
-    font-size: 3vw;
-    width: 100vw;
-    left: 40vw;
-    top: 10.75vw;
-}
-
-#contact-linkedin{
-    position: absolute;
-    height: 9vw;
-    width: 9vw;
-    left: 26.5vw;
-    top: 19vw;
-}
-
-#contact-gmail{
-    position: absolute;
-    height: 7vw;
-    width: 8vw;
-    left: 26.8vw;
-    top: 32vw;
-}
-
-#contact-insta{
-    position: absolute;
-    height: 12vw;
-    width: 12vw;
-    left: 25vw;
-    top: 6vw;
-}
-
-.contact-text-1{
-    position: absolute;
-    width: 100vw;
-    text-align: center;
-    font-family: 'FancyFont';
-    font-size: 4vw;
-}
-
-.contact-parent{
-    position: relative;
-    height: 55vw;
-    display: flex;
-    width: 100vw;
+.right-body h1 {
+  margin-left: 4.5vw;
+  font-weight:400;
 }
 
 
+.right-body{
+  display: flex;
+  width: 76%;
+  height: auto;
+}
+
+.right-body-content{
+  height: auto;
+  margin-top: 16vh;
+  margin-left: 3vw;
+}
+
+.right-body-content h1{
+  font-family: 'pf-videotext';
+  font-size: 3.5vw;
+  color: black;
+  padding-bottom: 4vh;
+}
+
+.right-body-content p{
+  font-family: 'open-sans';
+  font-size: 1.05vw;
+  padding-left: 0.25vw;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vh;
+  margin-left: 7vw;
+
+}
+
+.contact-item img {
+  width: 64px;
+  height: auto;
+  margin-right: 1vw;
+}
+
+.contact-item a {
+  text-decoration: none;
+}
+
+.contact-item p {
+  font-family: 'open-sans';
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 1vw;
+  line-height: 1.5;
+  margin: 0;
+  color: black;
+}
+
+.asset1{
+  margin-left: 44vw;
+  margin-top: 30vh;
+  height: 35vh;
+  width: 15vw;
+}
+
+.asset2{
+  margin-left: 60vw;
+  margin-top: 53vh;
+  height: 12vh;
+  width: 8vw;
+}
+
+@media (max-width: 768px) {
+  .contact-item img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contact-item p {
+    font-size: 18px;
+  }
+
+  .right-body-content h1{
+    font-size: 28px;
+  }
+
+  .contact-item p {
+    font-size: 12px;
+  }
+
+  .asset1 {
+    display: none;
+  }
+
+  .asset2 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .right-body-content h1{
+    font-size: 28px;
+  }
+
+  .contact-item p {
+    font-size: 12px;
+  }
+
+  .asset1 {
+    display: none;
+  }
+
+  .asset2 {
+    display: none;
+  }
+}
 </style>
