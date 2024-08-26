@@ -23,7 +23,7 @@
 <style scoped>
 .sponsor-parent{
     display: flex;
-    height: 98vh;
+    height: 100vh;
     border-bottom: 0.5vh solid black;
 }
 .sponsor-left{
@@ -50,8 +50,7 @@
 }
 
 .star-title{
-    font-size: 2.5vw;
-    font-weight: bold;
+    font-size: 3.5vw;
     margin-top: 4vh;
     margin-bottom: 1vw;
     font-family: pf-videotext;
@@ -88,8 +87,7 @@
 }
 
 .celestial-title{
-    font-size: 2.5vw;
-    font-weight: bold;
+    font-size: 3.5vw;
     margin-top: 10.5vh;
     font-family: pf-videotext;
     text-align: center;
