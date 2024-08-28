@@ -75,7 +75,7 @@ onBeforeUnmount(() => {
     <div class="right-body">
       <div class="scroll">
         <p> (SCROLL FOR INFO)</p>
-        <img src="src/assets/arrow.png" alt="Image">
+        <img src="/src/assets/arrow.png" alt="Image">
       </div>
     </div>
   </div>
